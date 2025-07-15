@@ -1,5 +1,5 @@
 /datum/sprite_accessory/penis
-	icon = 'icons/mob/sprite_accessory/genitals/pintle2.dmi'
+	icon = 'icons/mob/sprite_accessory/genitals/pintleDEBUG.dmi'
 	color_keys = 2
 	color_key_names = list("Member", "Skin")
 	relevant_layers = list(BODY_BEHIND_LAYER, BODY_FRONT_LAYER) //Vrell - Yes I know this is hacky but it works for now
