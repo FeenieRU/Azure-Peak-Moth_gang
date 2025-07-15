@@ -1,5 +1,5 @@
 /datum/sprite_accessory/penis
-	icon = 'icons/mob/sprite_accessory/genitals/pintle.dmi'
+	icon = 'icons/mob/sprite_accessory/genitals/pintle2.dmi'
 	color_keys = 2
 	color_key_names = list("Member", "Skin")
 	relevant_layers = list(BODY_BEHIND_LAYER, BODY_FRONT_LAYER) //Vrell - Yes I know this is hacky but it works for now
@@ -21,10 +21,20 @@
 					return "slit_1"
 				else
 					return "slit_2"
-	if(pp.erect_state == ERECT_STATE_HARD)
-		return "[icon_state]_[min(3,pp.penis_size+1)]"
-	else
-		return "[icon_state]_[pp.penis_size]"
+
+	///Solaris edit to erection sprites
+		if(pp.erect_state == ERECT_STATE_HARD)
+			return "[icon_state]_2"
+		else
+			return "[icon_state]_1"
+
+	///Old Azure code
+	/*
+		if(pp.erect_state == ERECT_STATE_HARD)
+			return "[icon_state]_[min(3,pp.penis_size+1)]"
+		else
+			return "[icon_state]_[pp.penis_size]"
+	*/
 
 /datum/sprite_accessory/penis/is_visible(obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)
 	if(owner.underwear)
